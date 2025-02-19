@@ -8,7 +8,8 @@ pipeline {
         }
         stage('Check Version'){
             steps{
-                sh 'python --version'
+                sh 'which python3 || which python'
+                sh 'python3 --version || python --version'
             }
         }
         stage('Run Script'){
