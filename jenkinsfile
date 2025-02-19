@@ -1,0 +1,19 @@
+pipeline {
+    stages{
+        stage('Start'){
+            steps{
+                echo 'starting'
+            }
+        }
+        stage('Check Version'){
+            steps{
+                sh 'python --version'
+            }
+        }
+        stage('Run Script'){
+            steps{
+                sh 'python main.py'
+            }
+        }
+    }
+}
